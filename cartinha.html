@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="Images/Coracao.png">
+  <title>Cartinha</title>
+  <link rel="stylesheet" href="css/cartinha.css" />
+</head>
+<body>
+
+  <video id="bg-video" class="bg-video" autoplay muted loop playsinline>
+    <source src="videos/fundo.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo em background.
+  </video>
+
+  <div id="buttons-switch">
+    <button id="prev-section" aria-label="Voltar">Voltar &#9664;</button>
+    <button id="next-section" aria-label="Avançar">Avançar &#9654;</button>
+  </div>
+
+  <div id="cartinha" class="page active">
+    <div class="styled-wrapper">
+      <a href="index.html" class="button" aria-label="Voltar para o início">
+        <div class="button-box">
+          <span class="button-elem">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+              <path fill="black" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+            </svg>
+          </span>
+          <span class="button-elem">
+            <svg fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+              <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+            </svg>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <h1>Cartinha de Parabéns</h1>
+    <p>Parabéns, meu amor!</p>
+    <p>
+      Pra não começar dizendo que não sei escrever cartas de novo, decidi fazer
+      algo diferente: juntei um pedido seu com uma ideia criativa. Então,
+      criei esse site especialmente pra você!
+    </p>
+    <p>
+      Coloquei alguns toques a mais pra deixar tudo com a sua carinha e fazer
+      com que essa experiência seja tão especial quanto você é pra mim.
+    </p>
+    <p>Agora sim, começando a carta de verdade... Eu te amo!</p>
+    <p>
+      E mesmo depois de dois (agora três!) aniversários juntos, você ainda me
+      pergunta se eu te amo. E a resposta é sempre a mesma:
+    </p>
+    <p><strong>EU TE AMO!</strong></p>
+    <p>
+      Por causa disso, às vezes eu fico tentando achar formas diferentes de mostrar
+      isso. Aí acabei pensando nessa carta:
+    </p>
+    <p><em>"O quanto eu te amo?"</em> Bom...</p>
+  </div>
+
+  <div id="player" class="page">
+    <div class="player-container">
+      <h2>Te amo como o Bruno Mars em uma das minhas músicas favoritas:</h2>
+      <div class="player">
+        <audio id="audio" src="midia/DieWithASmile.mp3"></audio>
+        <div class="controls">
+          <button id="btn-play-pause" aria-label="Play/Pause">▶️</button>
+          <div
+            class="progress-container"
+            id="progress-container"
+            aria-label="Controle de progresso do áudio"
+            role="slider"
+            tabindex="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+          >
+            <div class="progress" id="progress"></div>
+            <div class="thumb" id="thumb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="anime" class="page">
+    <div class="video-container">
+      <h2>Te amo como Edward Elric e Winry Rockbell em um dos meus animes favoritos:</h2>
+      <video id="video-player" controls>
+        <source src="midia/FullMethal.mp4" type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+    </div>
+  </div>
+
+  <div id="livro" class="page">
+    <div class="image-container">
+      <h2>Te amo como no meu livro favorito (único que eu li):</h2>
+      <img src="Images/DivinaComedia.jpg" alt="Lembrança especial" />
+    </div>
+  </div>
+
+  <div id="final" class="page active">
+    <div>
+      <p>Enfim, eu te amo meu amor!</p>
+      <p>Eu te amo mais que tudo no mundo e espero que você tenha gostado da minha cartinha.</p>
+      <p>Feliz aniversário! Que esse dia seja tão especial quanto você é pra mim.</p>
+      <p>Feliz aniversário!! 🎉🥳🎈</p>
+    </div>
+  </div>
+
+  <script src="js/cartinha.js"></script>
+</body>
+</html>

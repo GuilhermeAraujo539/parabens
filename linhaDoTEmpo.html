@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="Images/Coracao.png">
+  <link rel="stylesheet" href="css/linhaDoTempo.css" />
+  <title>Linha do tempo</title>
+</head>
+<body>
+    <div id="cartinha" class="page active">
+    <div class="styled-wrapper">
+      <a href="main.html" class="button" aria-label="Voltar para o início">
+        <div class="button-box">
+          <span class="button-elem">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+              <path fill="black" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+            </svg>
+          </span>
+          <span class="button-elem">
+            <svg fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+              <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+            </svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  <h1>Linha do tempo do nosso Relacionamento!</h1>
+
+  <div class="timeline-container" id="timeline-container">
+    <div class="timeline" id="timeline">
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <div class="event-display">
+    <div class="event-image-card">
+      <img id="imagem" src="" alt="Imagem do evento" />
+    </div>
+    <h2 id="titulo"></h2>
+    <p id="data"></p>
+    <p id="descricao"></p>
+  </div>
+
+  <div class="botoes">
+    <button id="voltar">Voltar</button>
+    <button id="avancar">Avançar</button> 
+  </div>
+
+  <script src="js/linhaDoTempo.js"></script>
+</body>
+</html>

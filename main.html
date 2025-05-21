@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="Images/Coracao.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>ui</title>
+</head>
+
+<body>
+  <div class="background">
+    <div class="fundo-cor"></div>
+    <div class="fundo-carrossel">
+      <div class="slide slide1"></div>
+      <div class="slide slide2"></div>
+      <div class="slide slide3"></div>
+      <div class="slide slide4"></div>
+    </div>
+  </div>
+
+  <section class="secao-cards">
+    <h2>Selecione uma opção</h2>
+
+    <button class="scroll-btn left">←</button>
+    <button class="scroll-btn right">→</button>
+
+    <div class="container-cards">
+      <a href="cartinha.html" class="card">
+        <div class="card-image">
+          <img src="Images/Cartinha.png" alt="opção Cartinha" />
+        </div>
+        <div class="card-info">
+          <h3>Cartinha</h3>
+          <p>Uma cartinha interativa (mais ou menos) de todo meu coração</p>
+        </div>
+      </a>
+
+      <a href="quiz.html" class="card">
+        <div class="card-image">
+          <img src="Images/interrogação.png" alt="opção Quiz" />
+        </div>
+        <div class="card-info">
+          <h3>Quiz do Amor</h3>
+          <p>Um quiz divertido para testar o quanto você me conhece ou conhece a gente.</p>
+        </div>
+      </a>
+
+      <a href="linhaDoTempo.html" class="card">
+        <div class="card-image">
+          <img src="Images/ampulheta.png" alt="opção Linha do Tempo" class="invertida" />
+        </div>
+        <div class="card-info">
+          <h3>Linha do Tempo</h3>
+          <p>Uma jornada cheia de momentos especiais e memórias inesquecíveis.</p>
+        </div>
+      </a>
+
+      <a href="tempoJuntos.html" class="card">
+        <div class="card-image">
+          <img src="Images/calendario.png" alt="opção Tempo Juntos" />
+        </div>
+        <div class="card-info">
+          <h3>O que aconteceu desde que você nasceu</h3>
+          <p>Um contador que mostra curiosidades sobre a sua vida.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="scroll-indicator">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <div id="splash">
+    <h1>Feliz aniversário meu amor!</h1>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

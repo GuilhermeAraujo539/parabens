@@ -1,0 +1,223 @@
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f3f4f6;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.timeline-container {
+  width: 100%;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  width: max-content;
+  padding: 0px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #d1d5db;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.step {
+  width: 24px;
+  height: 24px;
+  background-color: #d1d5db;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.3s ease, transform 0.3s;
+  border: 3px solid white;
+  flex-shrink: 0;
+}
+
+.step.active {
+  background-color: #4f46e5;
+  transform: scale(1.2);
+}
+
+.event-display {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+
+  height: 320px; /* altura fixa para evitar scroll */
+
+  overflow: visible; /* sem scroll interno */
+
+  font-size: 14px; /* fonte menor */
+  line-height: 1.3; /* linha mais compacta */
+}
+
+.event-image-card {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.event-image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 180px;
+}
+
+h2#titulo {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+p#data, p#descricao {
+  margin: 4px 0;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff27b0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff6cc9;
+}
+
+button:disabled {
+  background-color: #ad9caf;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .event-display {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .botoes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+.styled-wrapper .button {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px; 
+  margin: 0 5px;    
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.styled-wrapper .button:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 5px;           /* espaço interno reduzido */
+  border: 2px solid black;  /* borda mais fina */
+  transition:
+    opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.styled-wrapper .button:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 5px;
+  border: 3px solid #000000;
+  transform: scale(1.3);
+  transition:
+    opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.styled-wrapper .button:hover:before,
+.styled-wrapper .button:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition:
+    opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.styled-wrapper .button:hover:after,
+.styled-wrapper .button:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.styled-wrapper .button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.styled-wrapper .button-elem {
+  display: block;
+  width: 20px;       
+  height: 20px;
+  margin: 15px 12px 0 12px;
+  transform: rotate(360deg);
+  fill: #f0eeef;
+}
+
+.styled-wrapper .button:hover .button-box,
+.styled-wrapper .button:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-45px);
+}

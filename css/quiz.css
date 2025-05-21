@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #ffe6f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.quiz-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.25);
+  text-align: center;
+}
+
+h1 {
+  color: #e91e63;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.question {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.question h3 {
+  margin-bottom: 12px;
+  color: #c2185b;
+  font-size: 18px;
+}
+
+.options label {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.options input[type="radio"] {
+  display: none;
+}
+
+.options span {
+  display: block;
+  padding: 12px 15px;
+  background-color: #ffe0ed;
+  border-radius: 12px;
+  transition: background-color 0.3s, transform 0.2s;
+  border: 2px solid transparent;
+}
+
+.options span:hover {
+  background-color: #ffcde6;
+}
+
+.options input[type="radio"]:checked + span {
+  background-color: #f06292;
+  color: white;
+  border-color: #e91e63;
+  transform: scale(1.02);
+}
+
+#submit-btn {
+  background-color: #e91e63;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+#submit-btn:hover {
+  background-color: #d81b60;
+}
+
+#result {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #880e4f;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  #submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+.styled-wrapper .button {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px; 
+  margin: 0 5px;    
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.styled-wrapper .button:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 5px;           /* espaço interno reduzido */
+  border: 2px solid black;  /* borda mais fina */
+  transition:
+    opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.styled-wrapper .button:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 5px;
+  border: 3px solid #000000;
+  transform: scale(1.3);
+  transition:
+    opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.styled-wrapper .button:hover:before,
+.styled-wrapper .button:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition:
+    opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.styled-wrapper .button:hover:after,
+.styled-wrapper .button:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.styled-wrapper .button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.styled-wrapper .button-elem {
+  display: block;
+  width: 20px;       
+  height: 20px;
+  margin: 15px 12px 0 12px;
+  transform: rotate(360deg);
+  fill: #f0eeef;
+}
+
+.styled-wrapper .button:hover .button-box,
+.styled-wrapper .button:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-45px);
+}
