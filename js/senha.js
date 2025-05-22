@@ -9,7 +9,7 @@ form.addEventListener('submit', function(e) {
   } else {
     alert("Senha Correta! Redirecionando...");
     localStorage.setItem("logado", "true");
-    window.location.href = "index.html";
+    window.location.href = "main.html";
   }
 
   e.preventDefault();
